@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>青原色创新实验室</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf8">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/screen.css" rel="stylesheet" media="screen">
+<link href="css/main.css" rel="stylesheet" media="screen">
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="row page-header">
+  <h1>青原色创新实验室<small>用影像讲述身边的故事</small></h1>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">影<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">吉安现场</a></li>
+      <li><a href="#">吉安面孔</a></li>
+      <li><a href="#">吉安色彩</a></li>
+    </ul>
+    </li>
+    <li>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">像<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">民国十九年</a></li>
+      <li><a href="#">长征</a></li>
+    </ul>
+    </li>
+    <li>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">志<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">善巧</a></li>
+      <li><a href="#">茶花日记</a></li>
+    </ul>
+    </li>
+    <li><a href="#">青原色</a></li>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="top-story thumbnail">
+      <a href="recommended.html">
+        <h1>XXXXXXXX</h1>
+        <img class="img-responsive" src="uploads/2011/08/01.jpg" alt="XXXXX"></img>
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div id="timelineContainer">
+      <div class="timelineMajor">
+        <h2 class="timelineMajorMarker"><span>13年11月</span></h2>
+        <dl class="timelineMinor">
+          <dt id="131108"><a>周五观景会</a></dt>
+          <dd class="timelineEvent" id="131108EX" style="display:none;">
+          <h3>2013/11/08</h3>
+          <p>
+          本次放映少年PI
+          </p>
+          </dd><!-- /.timelineEvent -->
+        </dl><!-- /.timelineMinor -->
+        <dl class="timelineMinor">
+          <dt id="131115"><a>周五观景会</a></dt>
+          <dd class="timelineEvent" id="131115EX" style="display:none;">
+          <h3>2013/11/15</h3>
+          <p>
+          本次放映三个火枪手
+          </p>
+          <br class="clear">
+          </dd><!-- /.timelineEvent -->
+        </dl><!-- /.timelineMinor -->
+      </div><!-- /.timelineMajor -->
+
+      <div class="timelineMajor">
+        <h2 class="timelineMajorMarker"><span>13年12月</span></h2>
+        <dl class="timelineMinor">
+          <dt id="131205"><a>周五观景会</a></dt>
+          <dd class="timelineEvent" id="131205EX" style="display:none;">
+          <h3>2013/12/05</h3>
+          <p>
+          </p>
+          <br class="clear">
+          </dd><!-- /.timelineEvent -->
+        </dl><!-- /.timelineMinor -->
+      </div><!-- /.timelineMajor -->
+
+    </div><!-- /#timelineContainer -->
+  </div>
+</div>
+<footer id="footer">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <nav>
+            <h5>网站相关</h5>
+            <ul>
+              <li><a href="#">新浪微博</a></li>
+              <li><a href="#">豆瓣小站</a></li>
+              <li><a href="#">联系我们</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-4">
+          <nav>
+            <h5>联系合作</h5>
+            <ul>
+              <li><a href="/about">关于我们</a></li>
+              <li><a href="mailto:press@pragmatic.ly">合作伙伴</a></li>
+              <li><a href="mailto:press@pragmatic.ly">媒体报道</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-4">
+          <nav>
+            <h5>关注我们</h5>
+            <ul>
+              <li><a href="https://pragmatic.ly/blog">官方博客</a></li>
+              <li><a class="social-weibo" href="http://weibo.com/pragmaticly" target="_blank">微博</a></li>
+              <li><a class="social-facebook" href="//facebook.com/pragmaticly" target="_blank">Facebook</a></li>
+              <li><a class="social-twitter" href="//twitter.com/#!/pragmatic_ly" target="_blank">Twitter</a></li>
+              <li><a class="social-google" href="//plus.google.com/109049203627299997967">Google+</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row copyright">
+        <div class="col-md-12">
+          <p>© 2008-2013 IFChina Original Studio</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</footer>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/timeliner.js"></script>
+<script>
+
+$(document).ready(function() {
+  $.timeliner({
+    startOpen:['#131108EX']
+  });
+});
+</script>
+</body>
+</html>

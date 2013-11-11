@@ -1,0 +1,15 @@
+<div id="timelineContainer">
+  {% for event in contents.events %}
+    <div class="timelineMajor">
+    <h2 class="timelineMajorMarker"><span>{{event.event_date | localized_date '%y年%B'}}</span></h2>
+    <dl class="timelineMinor">
+      <dt id="{{event.event_date | localized_date '%y%m%d'}}"><a>{{event.title}}</a></dt>
+      <dd class="timelineEvent" id="{{event.event_date | localized_date '%y%m%dEX'}}" style="display:none;">
+        <h3>{{event.event_date | localized_date '%b %d'}}</h3>
+        <p>{{event.description}}</p>
+      </dd><!-- /.timelineEvent -->
+    </dl><!-- /.timelineMinor -->
+    </div><!-- /.timelineMajor -->
+  {% endfor %}
+  </div><!-- /#timelineContainer -->
+
