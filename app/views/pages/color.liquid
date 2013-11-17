@@ -10,6 +10,6 @@ position: 101
 {% extends parent %}
 {% block main %}
 {% with_scope project: face %}
- {% include entries with entries: contents.articles %}
+ {% include articles with articles: contents.articles %}
 {% endwith_scope %}
 {% endblock %}

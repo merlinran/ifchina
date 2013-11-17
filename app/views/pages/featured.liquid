@@ -10,6 +10,6 @@ position: 103
 {% extends parent %}
 {% block main %}
 {% with_scope featured: true %}
-{% include entries with entries: contents.articles %}
+{% include articles with articles: contents.articles %}
 {% endwith_scope %}
 {% endblock %}

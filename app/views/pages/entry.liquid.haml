@@ -9,7 +9,5 @@ position: 105
 ---
 {% extends parent %}
 {% block main %}
-{% with_scope project: live %}
-{% include articles with articles: contents.articles %}
-{% endwith_scope %}
+{% include article with article %}
 {% endblock %}
