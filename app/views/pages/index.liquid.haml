@@ -24,12 +24,14 @@ published: true
     .container
       .row
       .col-md-8#featured
-        {% assign article = contents.live.first %}
+        {% with_scope featured: true %}
+        {% assign article = contents.articles.first %}
         %a(href="featured.html")
           .feather
             {{ article.photo.url | image_tag: 'class:image-wrap' }}
           %h1 {{article.title}}
           {{article.text}}
+        {% endwith_scope %}
       .col-md-4
         {% include events %}
     {% endblock %}

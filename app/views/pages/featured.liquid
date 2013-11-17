@@ -1,13 +1,11 @@
 ---
 title: 编辑推荐
-slug: featured
 listed: true
 published: true
-cache_strategy: none
-response_type: text/html
-position: 103
 ---
 {% extends parent %}
 {% block main %}
-{% include entries with entries: contents.color %}
+{% with_scope featured: true %}
+{% include entries with entries: contents.articles %}
+{% endwith_scope %}
 {% endblock %}
