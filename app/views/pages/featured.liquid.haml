@@ -10,6 +10,9 @@ position: 103
 {% extends parent %}
 {% block main %}
 {% with_scope featured: true %}
-{% include articles with articles: contents.articles %}
+.container
+  .row
+    .col-md-8
+      {% include articles with articles: contents.articles %}
 {% endwith_scope %}
 {% endblock %}

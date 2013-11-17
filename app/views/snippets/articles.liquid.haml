@@ -1,9 +1,6 @@
-.container
-  .row
-    .col-md-8
-      {% paginate articles by 3 %}
-      {% for article in paginate.collection %}
-      {% include article with article %}
-      {% endfor %}
-      {{ paginate | default_pagination }}
-      {% endpaginate %}
+{% paginate articles by 3 %}
+{% for article in paginate.collection %}
+{% include article with article %}
+{% endfor %}
+{{ paginate | default_pagination }}
+{% endpaginate %}

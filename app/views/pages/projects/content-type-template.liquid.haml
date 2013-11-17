@@ -11,6 +11,13 @@ content_type: projects
 {% extends parent %}
 {% block main %}
 {% with_scope project: project %}
-{% include articles with articles: contents.articles %}
+.container
+  .row
+    .col-md-8
+      {% include articles with articles: contents.articles %}
+    .col-md-4
+      .panel
+        %h1 {{project.name}}
+        %p {{project.description}}
 {% endwith_scope %}
 {% endblock %}

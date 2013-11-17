@@ -40,3 +40,18 @@ footer {
     //@include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
   }
 }
+
+.panel {
+  position: relative;
+  .article {
+    margin: 15px;
+    .featured {
+      width: 138px;
+      height: 138px;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      background: url(../images/featured.png) no-repeat;
+    }
+  }
+}

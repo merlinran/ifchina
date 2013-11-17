@@ -1,8 +1,10 @@
 .panel
   .article
+    {% if article.featured %}
+    %a.featured(href='/featured')
+    {% endif %}
     %a(href='/articles/{{ article._permalink }}')
       %h1 {{ article.title }}
-    {{ '精华' if article.featured }}
     {{ article.photo.url | image_tag: 'class:thumbnail' }}
     %p {{ article.text }}
     %a(href="/projects/{{article.project._permalink}}") {{ article.project.name }}
