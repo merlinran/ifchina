@@ -1,11 +1,9 @@
 ---
-title: 吉安现场
+title: 文章列表
 listed: true
 published: true
 ---
 {% extends parent %}
 {% block main %}
-{% with_scope project: live %}
 {% include articles with articles: contents.articles %}
-{% endwith_scope %}
 {% endblock %}
