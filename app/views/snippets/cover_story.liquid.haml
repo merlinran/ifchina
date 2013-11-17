@@ -1,0 +1,10 @@
+#cover-story
+  {% with_scope featured: true %}
+  {% assign article = contents.articles.first %}
+  %a(href="featured")
+    .feather
+      {{ article.photo.url | image_tag: 'class:image-wrap' }}
+    %h1 {{article.title}}
+    {{article.text}}
+  {% endwith_scope %}
+

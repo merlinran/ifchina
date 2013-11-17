@@ -1,0 +1,17 @@
+---
+title: 文章显示模板
+slug: content_type_template
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+content_type: articles
+---
+{% extends parent %}
+{% block main %}
+.container
+  .row
+    .col-md-8
+      {% include article with article %}
+{% endblock %}

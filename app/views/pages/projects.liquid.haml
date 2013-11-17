@@ -1,0 +1,11 @@
+---
+title: 文章列表
+listed: true
+published: true
+---
+{% extends parent %}
+{% block main %}
+{% for project in contents.projects %}
+%a(href='{{project._permalink}}') {{ project.name }}
+{% endfor %}
+{% endblock %}

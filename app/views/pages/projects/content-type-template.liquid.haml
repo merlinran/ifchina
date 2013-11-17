@@ -1,0 +1,16 @@
+---
+title: 文章显示模板
+slug: content_type_template
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+content_type: projects
+---
+{% extends parent %}
+{% block main %}
+{% with_scope project: project %}
+{% include articles with articles: contents.articles %}
+{% endwith_scope %}
+{% endblock %}
