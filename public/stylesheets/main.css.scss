@@ -1,0 +1,42 @@
+@import 'compass/css3';
+
+body {
+  background: url(../images/home-background.jpg);
+}
+
+header.page-header{
+  background-color: rgba(white, 0.6);
+  margin-top: 0;
+  border: 0;
+}
+
+#featured {
+}
+
+#timelineContainer {
+  background-color: rgba(white, 0.4);
+}
+
+footer {
+  color: #666;
+  background-color: rgba(white, 0.6);
+}
+
+
+.feather .image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  @include border-radius(3em);
+  &:after  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    @include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
+    //@include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
+  }
+}

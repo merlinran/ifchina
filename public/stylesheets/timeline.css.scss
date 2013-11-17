@@ -1,0 +1,130 @@
+/* ============ TIMELINE ============= */
+@import 'compass/css3';
+#timelineContainer {
+  border-left:2px solid #ccc;
+  margin:0 auto;
+  float:left;
+  width:100%;
+}
+
+.timelineToggle {
+  float:right;
+  margin-right:0;
+  white-space:nowrap;
+}
+
+.timelineMajor {
+  clear:left;
+  float:left;
+  margin:0 0 12px;
+  h2 {
+    background:url(../images/timeline_century_tick.gif) left center no-repeat;
+    font-family:Palatino,"Times New Roman", Times, serif;
+    cursor: pointer;
+    font-size:3em;
+    font-weight:400;
+    margin:0 0 10px;
+    padding:4px 4px 4px 20px;
+    span {
+      background:#ccc;
+      @include border-radius(4px);
+      color:#131313;
+      letter-spacing:.1em;
+      line-height:1.7em;
+      padding:3px 5px 1px;
+    }
+  }
+}
+
+dl.timelineMinor {
+  clear:left;
+  float:left;
+  margin:0 12px 0 0;
+  padding:4px 4px 4px 0;
+  position:relative;
+  dt {
+    background:url(../images/timeline_decade_tick.gif) left center no-repeat;
+    clear:left;
+    font-size:1.6em;
+    list-style-type:none;
+    line-height:1.2em;
+    margin:0 0 12px;
+    padding:0 0 0 24px;
+    white-space:nowrap;
+    a {
+      color:#999;
+      cursor:pointer;
+      &.closed {
+        color:#999;
+        font-size:1em;
+        margin-left:0;
+      }
+      &.open &:hover{
+        color:#7DBADF;
+      }
+    }
+  }
+  dd {
+    padding-left:24px;
+    width:100%;
+    h3 {
+      color:#FFF;
+      clear:both;
+      float:left;
+      font-size:1.5em;
+      margin:0;
+      white-space:nowrap;
+    }
+  }
+}
+
+.timelineEvent {
+  p {
+    clear:left;
+    float:left;
+    line-height:1.5em;
+    margin:6px 0 10px;
+  }
+
+  h4 {
+    clear:left;
+    float:left;
+    font-size:1.4em;
+    font-weight:400;
+    margin:10px 0 0;
+    padding:0 0 0 20px;
+  }
+
+  blockquote {
+    border-left:2px solid #ccc;
+    clear:left;
+    float:left;
+    font-size:1.8em;
+    margin-left:0;
+    padding:0 30px;
+    .attribution {
+      font-size:0.7em;
+      text-align: right;
+    }
+  }
+
+  .media {
+    float:right;
+    padding:0 0 12px;
+    img {
+      border:2px solid #000;
+      margin:0;
+    }
+    p {
+    font-size:1.2em;
+    margin:0;
+    padding:0;
+    }
+    a:link, a:visited {
+      color:#ab221b;
+    }
+    a:hover {
+      color:#7DBADF;
+    }
+  }
+}

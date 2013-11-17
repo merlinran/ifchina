@@ -1,37 +1,37 @@
 ---
-- 2013年4月12日的吉安:
-    _slug: 2013nian-4yue-12ri-de-ji-an
-    featured: true
-    category: '吉安现场'
-    excerpt: ''
-    photo: /samples/live/2013nian-4yue-12ri-de-ji-an/P413.jpg
-    text: "<p>2013年4月12日的吉安，余家河废虚。 在这个以拆迁为主题的时代，或许只有这些拾荒者最知其底细。</p>\r\n<p style=\"text-align:
-      right;\">拍摄：梅玉杰</p>"
-- Sample 4:
-    _slug: sample-4
-    featured: false
-    category: '吉安现场'
-    excerpt: ''
-    photo: /samples/live/sample-4/timeline_century_tick.gif
-    text: Vel veniam et vel porro nam.
-- Sample 3:
-    _slug: sample-3
-    featured: true
-    category: '吉安面孔'
-    excerpt: ''
-    photo: /samples/live/sample-3/timeline_century_tick.gif
-    text: Exercitationem quae earum ut omnis.
-- Sample 2:
-    _slug: sample-2
-    featured: true
-    category: '吉安面孔'
-    excerpt: ''
-    photo: /samples/live/sample-2/timeline_century_tick.gif
-    text: Provident tempore enim qui numquam.
 - Sample 1:
     _slug: sample-1
+    category: 吉安色彩
     featured: false
-    category: '吉安色彩'
+    photo: /samples/articles/sample-1/timeline_century_tick.gif
     excerpt: ''
-    photo: /samples/live/sample-1/timeline_century_tick.gif
     text: Eligendi nostrum impedit aliquid iste corporis hic suscipit nihil.
+- Sample 2:
+    _slug: sample-2
+    category: 吉安面孔
+    featured: true
+    photo: /samples/articles/sample-2/timeline_century_tick.gif
+    excerpt: ''
+    text: Provident tempore enim qui numquam.
+- Sample 3:
+    _slug: sample-3
+    category: 吉安面孔
+    featured: true
+    photo: /samples/articles/sample-3/timeline_century_tick.gif
+    excerpt: ''
+    text: Exercitationem quae earum ut omnis.
+- Sample 4:
+    _slug: sample-4
+    category: 吉安现场
+    featured: false
+    photo: /samples/articles/sample-4/timeline_century_tick.gif
+    excerpt: ''
+    text: Vel veniam et vel porro nam.
+- 2013年4月12日的吉安:
+    _slug: 2013nian-4yue-12ri-de-ji-an
+    category: 吉安现场
+    featured: true
+    photo: /samples/articles/2013nian-4yue-12ri-de-ji-an/P413.jpg
+    excerpt: ''
+    text: "<p>2013年4月12日的吉安，余家河废虚。 在这个以拆迁为主题的时代，或许只有这些拾荒者最知其底细。</p>\r\n<p style=\"text-align:
+      right;\">拍摄：梅玉杰</p>"

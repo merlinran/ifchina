@@ -1,56 +1,44 @@
+---
 name: 文章
-slug: articles
 description: 所有文章
+slug: articles
 label_field_name: title
-order_by: created_at # default: manually, also available: created_at or any field slug
-order_direction: desc # default: asc, also available: desc
-group_by: category
-fields: 
+order_by: created_at
+order_direction: desc
+fields:
 - title:
     label: 标题
     type: string
     required: true
-    hint:
-    localized: false
-
 - category:
     label: 分类
     type: select
     required: true
-    hint:
     select_options:
-      - 吉安现场
-      - 吉安面孔
-      - 吉安色彩
-      - 民国十九年
-      - 长征
-    localized: false
-
+    - 吉安现场
+    - 吉安面孔
+    - 吉安色彩
+    - 民国十九年
+    - 长征
 - featured:
     label: 精华内容
     type: boolean
     required: true
-    hint:
-    localized: false
-
 - photo:
     label: 照片
     type: file
     required: true
-    hint:
-    localized: false
-
 - excerpt:
     label: 摘要
     type: text
-    required: false
-    hint:
-    localized: false
-
+    text_formatting: none
 - text:
     label: 正文
     type: text
     required: true
-    hint:
-    localized: false
     text_formatting: html
+- project:
+    label: 项目
+    type: belongs_to
+    class_name: projects
+    ui_enabled: true

@@ -1,0 +1,27 @@
+---
+name: 项目
+description: 青原色之前和正在进行的每个项目
+slug: projects
+label_field_name: name
+order_by: created_at
+order_direction: asc
+fields:
+- name:
+    label: 项目名称
+    type: string
+    required: true
+- description:
+    label: 项目简介
+    type: string
+    required: true
+- text:
+    label: 项目详细介绍
+    type: text
+    required: true
+    text_formatting: html
+- articles:
+    label: 文章
+    type: has_many
+    class_name: articles
+    inverse_of: project
+    ui_enabled: true
