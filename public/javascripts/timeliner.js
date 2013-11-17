@@ -3,6 +3,7 @@
  * @version		1.5.1
  * @copyright	Tarek Anandan (http://www.technotarek.com)
  */
+
 ;(function($) {
 
   var settings;

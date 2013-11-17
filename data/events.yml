@@ -1,16 +1,17 @@
-- "周五观景会":
-    description: "本次放映少年PI"
-    event_date: 2013/11/10
-
-- "周五观景会":
-    description: "本次放映少年PI"
-    event_date: 2013/11/1
-
-- "周五观景会":
-    description: "本次放映少年PI"
-    event_date: 2013/10/20
-
-- "周五观景会":
-    description: "本次放映少年PI"
-    event_date: 2013/10/10
-
+---
+- 周五观景会:
+    _slug: zhou-wu-guan-jing-hui
+    description: 本次放映少年PI
+    event_date: 11/10/2013
+- 周五观景会:
+    _slug: zhou-wu-guan-jing-hui-1
+    description: 本次放映少年PI
+    event_date: 11/01/2013
+- 周五观景会:
+    _slug: zhou-wu-guan-jing-hui-2
+    description: 本次放映少年PI
+    event_date: 10/20/2013
+- 周五观景会:
+    _slug: zhou-wu-guan-jing-hui-3
+    description: 本次放映少年PI
+    event_date: 10/10/2013

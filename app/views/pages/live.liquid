@@ -1,0 +1,14 @@
+---
+title: 吉安现场
+slug: live
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 105
+---
+{% extends parent %}
+{% block main %}
+{% with_scope category = '吉安现场' %}
+  {% include entries with entries: contents.articles %}
+{% endblock %}

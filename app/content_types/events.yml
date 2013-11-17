@@ -1,51 +1,20 @@
-# Public name of this content type
-name: Events
-
-# TODO: explain
+---
+name: 活动
+description: 青原色的每一次活动
 slug: events
-
-# Explanation for the backoffice
-description: A description of the content type for the editors
-
-# Default field (e.g title)
 label_field_name: title
-
-# Order of entries
-order_by: manually # default: manually, also available: created_at or any field slug
-
-# Order direction
-# order_direction: asc # default: asc, also available: desc
-
-# Display entries grouped by <field> in the backoffice
-# group_by: <your field>
-
-# Activate public 'create' API (e.g for a contact form)
-# public_submission_enabled: false
-
-# Emails to be notified on new entries using the public API
-# public_submission_accounts: ['john@acme.net']
-
-# Describe each field. The name shoud always be an underscored string
-fields: 
-- title: # Name of the field
-    label: Title
+order_by: manually
+order_direction: asc
+fields:
+- title:
+    label: 名称
     type: string
     required: true
-    hint: A description of the field for the editors
-    localized: false
-
-- description: # Name of the field
-    label: Description
+- description:
+    label: 简述
     type: text
-    required: false
-    hint: A description of the field for the editors
-    localized: false
-    # Enable or not the RTE [html|text]
-    # text_formatting: html
-
-- event_date: # Name of the field
-    label: Event date
+    text_formatting: html
+- event_date:
+    label: 举办日期
     type: date
-    required: false
     hint: A description of the field for the editors
-    localized: false

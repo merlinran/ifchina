@@ -11,7 +11,6 @@ group :development do
   # Unix
   gem 'therubyracer', require: 'v8', platforms: :ruby
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
-
   # Windows
   gem 'wdm', '>= 0.1.0', require: RUBY_PLATFORM =~ /mswin|mingw/i && 'wdm'
 end

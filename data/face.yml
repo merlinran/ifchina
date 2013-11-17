@@ -1,0 +1,25 @@
+---
+- Sample 4:
+    _slug: sample-4
+    featured: false
+    excerpt: ''
+    photo: /samples/face/sample-4/timeline_century_tick.gif
+    text: Consequatur praesentium assumenda quia eaque quasi sapiente quidem.
+- Sample 3:
+    _slug: sample-3
+    featured: false
+    excerpt: ''
+    photo: /samples/face/sample-3/timeline_century_tick.gif
+    text: Ut voluptatem eum quisquam.
+- Sample 2:
+    _slug: sample-2
+    featured: false
+    excerpt: ''
+    photo: /samples/face/sample-2/timeline_century_tick.gif
+    text: Cumque numquam modi at.
+- Sample 1:
+    _slug: sample-1
+    featured: false
+    excerpt: ''
+    photo: /samples/face/sample-1/timeline_century_tick.gif
+    text: Iste voluptate eveniet repudiandae sit cum unde corrupti.

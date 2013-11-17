@@ -1,0 +1,70 @@
+# Public name of this content type
+name: 文章
+
+# TODO: explain
+slug: article
+
+# Explanation for the backoffice
+description: 所有文章
+
+# Default field (e.g title)
+label_field_name: title
+
+# Order of entries
+order_by: updated_at # default: manually, also available: created_at or any field slug
+
+# Order direction
+order_direction: desc # default: asc, also available: desc
+
+# Display entries grouped by <field> in the backoffice
+group_by: category
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
+
+# Describe each field. The name shoud always be an underscored string
+fields: 
+- title: # Name of the field
+    label: 标题
+    type: string
+    required: true
+    hint: A description of the field for the editors
+    localized: false
+
+- category: # Name of the field
+    label: 分类
+    type: select
+    required: true
+    hint: A description of the field for the editors
+    select_options:
+      - 吉安现场
+      - 吉安面孔
+      - 吉安色彩
+      - 民国十九年
+      - 长征
+    localized: false
+
+- photo: # Name of the field
+    label: 照片
+    type: file
+    required: true
+    hint: A description of the field for the editors
+    localized: false
+
+- excerpt: # Name of the field
+    label: 摘要
+    type: text
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- text: # Name of the field
+    label: 正文
+    type: text
+    required: true
+    hint: A description of the field for the editors
+    localized: false
+    text_formatting: html

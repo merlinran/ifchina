@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-8.panel
+      {% paginate entries by 3 %}
+      {% for entry in paginate.collection %}
+      .entry
+        %h1 {{ entry.title }}
+        {{ entry.photo.url | image_tag }}
+        %p {{ entry.text }}
+      {% endfor %}
+      {{ paginate | default_pagination }}
+      {% endpaginate %}

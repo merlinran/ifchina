@@ -1,0 +1,45 @@
+---
+title: 主页
+published: true
+---
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title {{ site.name }}
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(charset="utf8")
+    %meta(name="keywords" value="{{ site.meta_keywords }}")
+    %meta(name="description" value="{{ site.meta_description }}")
+    {{ 'bootstrap.min.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'screen.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'main.css' | stylesheet_tag: 'screen, projection' }}
+    /[if lt IE 9]
+      {{ 'html5shiv' | javascript_tag }}
+      {{ 'respond.min' | javascript_tag }}
+  %body
+    {% include header %}
+    {% block main %}
+    .content
+    .container
+      .row
+      .col-md-8#featured
+        {% assign article = contents.live.first %}
+        %a(href="featured.html")
+          .feather
+            {{ article.photo.url | image_tag: 'class:image-wrap' }}
+          %h1 {{article.title}}
+          {{article.text}}
+      .col-md-4
+        {% include events %}
+    {% endblock %}
+    {% include footer %}
+    {{ 'jquery-2.0.3.min' | javascript_tag }}
+    {{ 'bootstrap.min' | javascript_tag }}
+    {{ 'timeliner' | javascript_tag }}
+    :javascript
+      $(document).ready(function() {
+        $.timeliner({
+          startOpen:['#131108EX']
+        });
+      });

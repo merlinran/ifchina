@@ -1,0 +1,30 @@
+---
+name: 吉安色彩
+description: A description of the content type for the editors
+slug: color
+label_field_name: title
+order_by: created_at
+order_direction: desc
+fields:
+- title:
+    label: 标题
+    type: string
+    hint: A description of the field for the editors
+    required: true
+- featured:
+    label: 精华内容
+    type: boolean
+- excerpt:
+    label: 摘要
+    type: text
+- photo:
+    label: 照片
+    type: file
+    hint: A description of the field for the editors
+    required: true
+- text:
+    label: 正文
+    type: text
+    hint: A description of the field for the editors
+    required: true
+    text_formatting: html

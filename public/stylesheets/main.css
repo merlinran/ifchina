@@ -1,11 +1,21 @@
-.page-header {
-  background-color: #f4f1ed;
-  /*background-color: rgba(100,255,100, 0.1);*/
-  padding: 0 20px;
-  margin-top: 0;
+body {
+  background: url(../images/home-background.jpg);
 }
 
-.top-story h1 {
+header.page-header{
+  background-color: rgba(255,255,255, 0.6);
+  margin-top: 0;
+  border: 0;
+}
+
+#featured {
+}
+
+#timelineContainer {
+  background-color: rgba(255,255,255, 0.4);
+}
+
+/*.top-story h1 {
   z-index: 99;
   color: white;
   font-size: 6em;
@@ -13,16 +23,33 @@
   left: 80px;
   bottom: 80px;
   background:transparent;
-}
-
-.top-story img {
-  z-index: -10;
-}
-
-.top-story p {
-}
+}*/
 
 footer {
   color: #666;
-  background-color: #f4f1ed;
+  background-color: rgba(255,255,255, 0.6);
+  /*background-color: #f4f1ed;*/
+}
+
+
+.feather .image-wrap {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+}
+
+.feather .image-wrap:after  {
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: -webkit-gradient(radial, 50% 50%, 50, 50% 50%, 70, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)));
+  background: -moz-radial-gradient(50% 50%, circle, rgba(255,255,255,0) 50px, rgba(255,255,255,1) 70px);
 }
