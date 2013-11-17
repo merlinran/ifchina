@@ -27,15 +27,8 @@ position: 0
     .content
     .container
       .row
-      .col-md-8#featured
-        {% with_scope featured: true %}
-        {% assign article = contents.articles.first %}
-        %a(href="featured.html")
-          .feather
-            {{ article.photo.url | image_tag: 'class:image-wrap' }}
-          %h1 {{article.title}}
-          {{article.text}}
-        {% endwith_scope %}
+      .col-md-8
+        {% include cover_story %}
       .col-md-4
         {% include events %}
     {% endblock %}

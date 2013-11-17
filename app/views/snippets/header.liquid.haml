@@ -16,6 +16,6 @@
               %ul.dropdown-menu
                 {% for project in cat.entries %}
                 %li
-                  %a(href='{{project._permalink}}') {{ project.name }}
+                  %a(href='/projects/{{project._permalink}}') {{ project.name }}
                 {% endfor %}
           {% endfor %}

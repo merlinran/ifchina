@@ -4,4 +4,4 @@
       %h1 {{ article.title }}
     {{ article.photo.url | image_tag: 'class:thumbnail' }}
     %p {{ article.text }}
-    %p {{ article.project.name }}
+    %a(href="{{article.project._permalink}}") {{ article.project.name }}
