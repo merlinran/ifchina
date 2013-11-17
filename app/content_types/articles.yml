@@ -10,16 +10,6 @@ fields:
     label: 标题
     type: string
     required: true
-- category:
-    label: 分类
-    type: select
-    required: true
-    select_options:
-    - 吉安现场
-    - 吉安面孔
-    - 吉安色彩
-    - 民国十九年
-    - 长征
 - featured:
     label: 精华内容
     type: boolean

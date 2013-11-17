@@ -9,7 +9,7 @@ position: 105
 ---
 {% extends parent %}
 {% block main %}
-{% with_scope category: '吉安现场' %}
+{% with_scope project: live %}
   {% include entries with entries: contents.articles %}
 {% endwith_scope %}
 {% endblock %}

@@ -14,6 +14,14 @@ fields:
     label: 项目简介
     type: string
     required: true
+- category:
+    label: 项目分类
+    type: select
+    required: true
+    select_options:
+    - 影
+    - 像
+    - 异
 - text:
     label: 项目详细介绍
     type: text
