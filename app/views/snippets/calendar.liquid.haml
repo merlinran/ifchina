@@ -1,0 +1,13 @@
+.container
+  .row
+    .col-md-8
+      %ol.calendar
+        {% assign month = today %}
+        %li {{ month.month }}
+        %li.lastmonth 29
+        %li.lastmonth 30
+        {% for id in (1..30) %}
+        %li.thismonth {{id}}
+        {% endfor %}
+        %li.nextmonth 1
+        %li.nextmonth 2

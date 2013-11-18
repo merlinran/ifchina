@@ -1,0 +1,10 @@
+---
+title: 文章列表
+listed: true
+published: true
+---
+{{ 'calendar.css' | stylesheet_tag: 'screen, projection' }}
+{% extends parent %}
+{% block main %}
+{% include calendar with articles: contents.articles %}
+{% endblock %}

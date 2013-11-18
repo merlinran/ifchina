@@ -1,0 +1,79 @@
+/*
+ * CSS Calendar
+ * Tim Wright
+ * Chris Coyier
+ -----------------------------*/
+
+ol.calendar {
+  margin:0 auto;
+  display:block;
+  min-height: 200px;
+  background: url(../images/calendar/tl.png) top left no-repeat;
+  padding: 12px 0 0 20px;
+  /*p.link {
+    text-align:center;
+    display: block;
+  }
+  h1 {
+    display: block;
+    width: 200px;
+    height:76px;
+    background:url(../images/calendar/july.png);
+    text-indent:-9999px;
+    margin: 15px auto;
+   }*/
+
+   /*
+    * Day styles
+    -------------------------*/
+  li {
+    list-style:none;
+    width:7em;
+    height:6em;
+    float:left;
+    margin:.2em;
+    padding:.2em;
+    overflow:auto;
+    background: url(../images/calendar/day-bg.png) bottom right no-repeat;
+    &:nth-child(7n+1) {
+      clear: left;
+    }
+  }
+
+   /*
+    * Day content (UL/OL & P)
+    -------------------------*/
+  li p {
+    font-size:.7em;
+    display:block;
+  }
+  li ol {
+    width:auto;
+  }
+  li li ol li {
+    font-size:.7em;
+    display:block;
+    height:auto;
+    width:auto;
+    background: none;
+
+    margin:0;
+    padding:.2em 0;
+    float:none;
+  }
+
+  /*
+   * Holiday class
+   -------------------------*/
+  li li.holiday {
+  }
+
+  /*
+   * Inactive months
+   -------------------------*/
+  li.lastmonth,
+  li.nextmonth {
+    background: url(../images/calendar/day-bg-inactive.png);
+  }
+}
+
