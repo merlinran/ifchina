@@ -1,0 +1,23 @@
+---
+title: 主题显示模板
+slug: content_type_template
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+content_type: topics
+---
+{% extends parent %}
+{% block main %}
+{% with_scope topic: topic %}
+.container
+  .row
+    .col-md-8
+      {% include articles with articles: contents.articles %}
+    .col-md-4
+      .panel
+        %h1 {{topic.name}}
+        %p {{topic.description}}
+{% endwith_scope %}
+{% endblock %}
