@@ -1,0 +1,59 @@
+---
+title: 面板
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+---
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title {{ site.name }}
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(charset="utf8")
+    %meta(name="keywords" value="{{ site.meta_keywords }}")
+    %meta(name="description" value="{{ site.meta_description }}")
+    {{ 'bootstrap.min.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'timeline.css' | stylesheet_tag: 'screen, projection' }}
+    {{ 'main.css' | stylesheet_tag: 'screen, projection' }}
+    /[if lt IE 9]
+      {{ 'html5shiv' | javascript_tag }}
+      {{ 'respond.min' | javascript_tag }}
+  %body
+    {% include header %}
+    {% block main %}
+    .content
+      .container
+        .row
+          .panel
+            {% for type in contents %}
+            %h2 {{ type.name }}
+            {% endfor %}
+            {% for cat in contents.projects.group_by_category %}
+            %h2 {{ cat.name }}
+            %li
+              %ul
+                {% for project in cat.entries %}
+                %li
+                  %h2 {{ project.name }}
+                  %a(href='locomotive/content_types/articles/entries/new')新建
+                {% endfor %}
+            {% endfor %}
+    {% endblock %}
+    {% include footer %}
+    {{ 'jquery-2.0.3.min' | javascript_tag }}
+    {{ 'bootstrap.min' | javascript_tag }}
+    <link href="/assets/locomotive.css?body=1" media="screen" rel="stylesheet" type="text/css">
+    <script src="/assets/locomotive.js?body=1" type="text/javascript"></script>
+  :javascript
+      $(document).ready(function() {
+        var target_entry_view = new Locomotive.Views.ContentEntries.PopupFormView({
+          el:           $("article-template-entry"),
+          parent_view:  this,
+          model:        null,//@options.new_entry.clone(),
+          namespace:    null//@options.name
+          });
+        target_entry_view.render();
+      });
