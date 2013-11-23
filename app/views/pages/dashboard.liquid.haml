@@ -28,9 +28,7 @@ position: 0
       .container
         .row
           .panel
-            {% for type in contents %}
-            %h2 {{ type.name }}
-            {% endfor %}
+            {{ all_entries }}
             {% for cat in contents.projects.group_by_category %}
             %h2 {{ cat.name }}
             %li
