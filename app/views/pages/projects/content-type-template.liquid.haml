@@ -15,8 +15,9 @@ content_type: projects
   .row
     .col-md-8
       {% include articles with articles: contents.articles %}
-    .col-md-4
+    .col-md-4#project-sidebar
       .panel
+        {{project.photo.url | image_tag }}
         %h1 {{project.name}}
         %p {{project.description}}
 {% endwith_scope %}

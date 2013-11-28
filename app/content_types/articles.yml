@@ -10,6 +10,11 @@ fields:
     label: 标题
     type: string
     required: true
+- project:
+    label: 项目
+    type: belongs_to
+    class_name: projects
+    ui_enabled: true
 - featured:
     label: 精华内容
     type: boolean
@@ -23,11 +28,6 @@ fields:
     type: text
     required: true
     text_formatting: html
-- project:
-    label: 项目
-    type: belongs_to
-    class_name: projects
-    ui_enabled: true
 - topic:
     label: 主题
     type: belongs_to
