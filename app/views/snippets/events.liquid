@@ -1,19 +1,28 @@
 <div id="timelineContainer">
   {% for event in contents.events %}
+    {% assign event_month = event.event_date | localized_date: '%Y年%m月' %}
+    {% unless event_month == month_of_last_event %}
+    {% if major_ahead %}
+      </div>
+    {% endif %}
+    {% assign major_ahead = true %}
     <div class="timelineMajor">
       <h2 class="timelineMajorMarker">
-        <span>{{event.event_date || localized_date '%y年%B'}}</span>
+        <span>{{ event_month }}</span>
       </h2>
-    <dl class="timelineMinor">
-      <dt id="{{event.event_date || localized_date '%y%m%d'}}">
-      <a href="events/{{event._permalink}}">{{event.title}}</a>
-      </dt>
-      <dd class="timelineEvent" id="{{event.event_date | localized_date '%y%m%dEX'}}" style="display:none;">
-        <h3>{{event.event_date || localized_date '%b %d'}}</h3>
-        <p>{{event.description}}</p>
-      </dd><!-- /.timelineEvent -->
-    </dl><!-- /.timelineMinor -->
-    </div><!-- /.timelineMajor -->
+    {% endunless %}
+      <dl class="timelineMinor">
+        <dt id="{{event.event_date | date: '%y/%m/%d'}}">
+        <a href="events/{{event._permalink}}">{{event.title}}</a>
+        </dt>
+        <dd class="timelineEvent" id="{{event.event_date | localized_date: '%y%m%dEX'}}" style="display:none;">
+          <h3>{{event.event_date | localized_date: '%Y年%m月%d日 %A'}}</h3>
+        </dd><!-- /.timelineEvent -->
+      </dl><!-- /.timelineMinor -->
+    {% unless event_month == month_of_last_event %}
+    {% endunless %}
+    {% assign month_of_last_event = event_month %}
   {% endfor %}
-  </div><!-- /#timelineContainer -->
+    </div><!-- /.timelineMajor -->
+</div><!-- /#timelineContainer -->
 
