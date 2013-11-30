@@ -2,12 +2,12 @@
   .container
     .row
       .col-md-3.col-sm-4.logo
-        {{ 'logo.png' | theme_image_tag }}
+        %a(href='/') {{ 'logo.png' | theme_image_tag }}
       .col-md-9.col-sm-8.title
         .row
           .col-md-7
             %h1.text-right
-              %a(href='/') 青原色创新实验室
+              %a 青原色创新实验室
             %h2.text-right 用影像讲述身边的故事
         .row
           %ul.nav.navbar-nav
