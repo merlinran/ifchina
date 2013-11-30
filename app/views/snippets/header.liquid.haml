@@ -1,23 +1,26 @@
 %header.page-header
   .container
     .row
-      .col-md-8
-        %h1
-          %a(href='/') 青原色创新实验室
-          %small 用影像讲述身边的故事
-      .col-md-4
-    .row
-      .col-md-8
-      .col-md-4
-        %ul.nav.navbar-nav
-          {% for cat in contents.projects.group_by_category %}
-          %li.dropdown
-            %a.dropdown-toggle(data-toggle='dropdown' href='#')
-              {{cat.name}}
-              %b.caret
-              %ul.dropdown-menu
-                {% for project in cat.entries %}
-                %li
-                  %a(href='/projects/{{project._permalink}}') {{ project.name }}
-                {% endfor %}
-          {% endfor %}
+      .col-md-3.col-sm-4.logo
+        {{ 'logo.png' | theme_image_tag }}
+      .col-md-9.col-sm-8.title
+        .row
+          .col-md-7
+            %h1.text-right
+              %a(href='/') 青原色创新实验室
+            %h2.text-right 用影像讲述身边的故事
+        .row
+          %ul.nav.navbar-nav
+            {% for cat in contents.projects.group_by_category %}
+            %li.dropdown
+              %a.dropdown-toggle(data-toggle='dropdown' href='#')
+                {{cat.name}}
+                %b.caret
+                %ul.dropdown-menu
+                  {% for project in cat.entries %}
+                  %li
+                    %a(href='/projects/{{project._permalink}}') {{ project.name }}
+                  {% endfor %}
+            {% endfor %}
+            %li
+              %a(href='/events') 活动
