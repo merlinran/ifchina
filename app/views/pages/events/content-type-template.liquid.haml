@@ -1,0 +1,22 @@
+---
+title: 活动显示模板
+slug: content_type_template
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+content_type: events
+---
+{% extends parent %}
+{% block main %}
+.container
+  .row
+    .col-md-8.panel
+      %h1
+        %a(href='/events/{{event._permalink}}') {{ event.title }}
+      %h2
+        {{ event.event_date | localized_date: '%Y年%m月%d日 %A' }}
+      %div
+        {{event.description}}
+{% endblock %}

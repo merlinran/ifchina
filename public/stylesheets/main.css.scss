@@ -1,34 +1,63 @@
 @import 'compass/css3';
 
+@mixin round-image {
+  display: block;
+  margin: 0 auto;
+  @include border-radius(50%);
+}
+
+@mixin project-intro {
+  h1 { text-align: center; }
+  img {
+    @include round-image;
+  }
+}
+
 body {
   background: url(../images/home-background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  @include transition(opacity 0.2s ease-out);
 }
 
 header.page-header{
-  background-color: rgba(white, 0.6);
+  position: relative;
+  background-color: rgba(black, 0.6);
   margin-top: 0;
   border: 0;
-}
-
-#featured {
+  .title {
+    h1 { font-size: 4rem; }
+    @media (max-width: 768px) {
+    }
+    .nav {
+      float: right;
+    }
+  }
 }
 
 #timelineContainer {
-  background-color: rgba(white, 0.4);
+  background-color: rgba(white, 0.6);
+  margin-bottom: 20px;
 }
 
 footer {
   color: #666;
-  background-color: rgba(white, 0.6);
+  background-color: rgba(black, 0.6);
 }
 
 
 .feather .image-wrap {
-  position: relative;
-
   width: 100%;
-  height: 100%;
-  @include border-radius(3em);
+  position: relative;
+  @include border-radius(50%);
+  border: 2px solid #a0c7aa;
+  margin: 8px;
   &:after  {
     position: absolute;
     top: 0;
@@ -38,7 +67,7 @@ footer {
     content: ' ';
     @include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
     //@include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
-  }
+}
 }
 
 .panel {
@@ -52,6 +81,23 @@ footer {
       top: -1px;
       right: -1px;
       background: url(../images/featured.png) no-repeat;
+}
+}
+}
+
+#project-list {
+  background-color: rgba(white, 0.6);
+  #headline { text-align: center; }
+  .row {
+    padding: 20px 0;
+    border-top: 1px black;
+    .col-md-4 {
+      @include project-intro;
     }
   }
+}
+
+
+#project-sidebar {
+  @include project-intro;
 }

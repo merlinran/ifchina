@@ -1,0 +1,11 @@
+---
+title: 主题列表
+listed: false
+published: false
+---
+{% extends parent %}
+{% block main %}
+{% for topic in contents.topics %}
+%a(href='{{topic._permalink}}') {{ topic.name }}
+{% endfor %}
+{% endblock %}

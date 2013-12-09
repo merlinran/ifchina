@@ -7,7 +7,7 @@ response_type: text/html
 position: 0
 ---
 !!!
-%html(lang="en")
+%html(lang="zh-CN")
   %head
     %meta(charset="utf-8")
     %title {{ site.name }}
@@ -24,13 +24,13 @@ position: 0
   %body
     {% include header %}
     {% block main %}
-    .content
     .container
       .row
-      .col-md-8
-        {% include cover_story %}
-      .col-md-4
-        {% include events %}
+        .col-md-8
+          {% include cover_story %}
+        .col-md-4
+          {% include events %}
+    {% include project_list %}
     {% endblock %}
     {% include footer %}
     {{ 'jquery-2.0.3.min' | javascript_tag }}

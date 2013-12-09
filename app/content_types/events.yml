@@ -1,17 +1,17 @@
 ---
 name: 活动
-description: 青原色的每一次活动
+description: 发布青原色的每一次活动，按时间显示在主页右侧的近期活动列表中
 slug: events
 label_field_name: title
 order_by: manually
 order_direction: asc
 fields:
 - title:
-    label: 名称
+    label: 活动名称
     type: string
     required: true
 - description:
-    label: 简述
+    label: 活动详情
     type: text
     text_formatting: html
 - event_date:

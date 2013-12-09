@@ -14,6 +14,7 @@ fields:
     label: 项目简介
     type: string
     required: true
+    text_formatting: html
 - category:
     label: 项目分类
     type: select
@@ -22,11 +23,10 @@ fields:
     - 影
     - 像
     - 异
-- text:
-    label: 项目详细介绍
-    type: text
+- photo:
+    label: 照片
+    type: file
     required: true
-    text_formatting: html
 - articles:
     label: 文章
     type: has_many

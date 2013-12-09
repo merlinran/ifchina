@@ -2,7 +2,7 @@ source 'http://ruby.taobao.org'
 
 # ruby '1.9.3'
 
-gem 'locomotivecms_wagon', '1.3.1'
+gem 'locomotivecms_wagon'
 
 group :development do
   # Mac OS X
@@ -16,6 +16,7 @@ group :development do
 end
 
 group :misc do
+  gem 'locomotivecms_liquid_extensions', require: 'locomotivecms_liquid_extensions'
   # Add your extra gems here
   # gem 'susy', require: 'susy'
   # gem 'redcarpet', require: 'redcarpet'
