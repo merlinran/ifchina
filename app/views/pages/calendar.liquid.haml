@@ -6,5 +6,22 @@ published: true
 {{ 'calendar.css' | stylesheet_tag: 'screen, projection' }}
 {% extends parent %}
 {% block main %}
-{% include calendar with articles: contents.articles %}
+{% for year in (2008..2013) %}
+{% for month in (1..12) %}
+{% capture start_date_string %}
+{{year}}-{{month}}-01
+{% endcapture %}
+{% assign start_date = start_date_string | date: '%Y-%m-%d' %}
+{% assign end_date = start_date | plus: 1 %}
+{{ start_date }}
+{{ end_date }}
+%hr
+{% with_scope created_at.gte: start_date, created_at.lt: end_date %}
+{% assign articles = contents.articles %}
+{% if articles.length > 0 %}
+{% include calendar with articles %}
+{% endif %}
+{% endwith_scope %}
+{% endfor %}
+{% endfor %}
 {% endblock %}
