@@ -22,23 +22,25 @@ position: 0
       {{ 'html5shiv' | javascript_tag }}
       {{ 'respond.min' | javascript_tag }}
   %body
-    {% include header %}
-    {% block main %}
-    .container
-      .row
-        .col-md-8
-          {% include cover_story %}
-        .col-md-4
-          {% include events %}
-    {% include project_list %}
-    {% endblock %}
-    {% include footer %}
     {{ 'jquery-2.0.3.min' | javascript_tag }}
     {{ 'bootstrap.min' | javascript_tag }}
-    {{ 'timeliner' | javascript_tag }}
-    :javascript
-      $(document).ready(function() {
-        $.timeliner({
-          startOpen:['#131108EX']
+    {% include header %}
+    #content
+      {% block main %}
+      .container
+        .row
+          .col-md-8
+            {% include cover_story %}
+          .col-md-4
+            {% include events %}
+            {% include propaganda %}
+      {% include project_list %}
+      {{ 'timeliner' | javascript_tag }}
+      :javascript
+        $(document).ready(function() {
+          $.timeliner({
+            startOpen:['#131108EX']
+          });
         });
-      });
+      {% endblock %}
+    {% include footer %}

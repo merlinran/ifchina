@@ -1,13 +1,13 @@
 #project-list
   .row#headline
-    %h1 我们的项目
-  .container
-    {% for cat in contents.projects.group_by_category %}
-    .row
-      {% for project in cat.entries %}
-      .col-md-4
-        %a(href='/projects/{{project._permalink}}' title='{{ project.description }}')
-          {{project.photo.url | image_tag }}
-          %h1 {{ project.name }}
+    .col-md-12
+      %h1 我们的项目
+      {% for cat in contents.projects.group_by_category %}
+      .row
+        {% for project in cat.entries %}
+        .col-md-4
+          %a(href='/projects/{{project._permalink}}' title='{{ project.description }}')
+            {{project.photo.url | image_tag }}
+            %h1 {{ project.name }}
+        {% endfor %}
       {% endfor %}
-    {% endfor %}

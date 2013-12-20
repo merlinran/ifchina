@@ -1,5 +1,18 @@
 @import 'compass/css3';
 
+$orange: rgb(240, 150, 0);
+$green: rgb(0, 120, 120);
+$gray: rgb(200, 200, 200);
+$background: white;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$header-height: 100px;
+$left-margin: 40px;
+$left-border: 100px;
+$top-margin: 40px;
+$bottom-margin: 40px;
+
 @mixin round-image {
   display: block;
   margin: 0 auto;
@@ -8,36 +21,71 @@
 
 @mixin project-intro {
   h1 { text-align: center; }
-  img {
-    @include round-image;
-  }
+  img { @include round-image; }
+}
+
+@mixin corner {
+  display: block;
+  content: "";
+  width: $left-border;
+  height: $top-margin;
+  margin-left: $left-margin;
 }
 
 body {
-  background: #eeeeee;//url(../images/home-background.jpg);
-  background-attachment: fixed;
-  background-size: cover;
+  @media (min-width: $screen-sm-min) {
+    &:before, &:after {
+      @include corner;
+      height: $top-margin;
+      background-color: $orange;
+    }
+  }
 }
 
 a {
-  &:hover {
-    text-decoration: none;
-  }
+  &:hover { text-decoration: none; }
   @include transition(opacity 0.2s ease-out);
 }
 
-header.page-header{
+header {
   position: relative;
-  background-color: rgba(black, 0.6);
-  margin-top: 0;
+  background-color: $green;
   border: 0;
+  margin: 0;
+  @media (min-width: $screen-sm-min) {
+    &:before {
+      @include corner;
+      float: left;
+      height: $header-height;
+      background: $green url(../images/logo.png) no-repeat;
+      z-index: -99;
+    }
+  }
   .title {
-    h1 { font-size: 4rem; }
-    @media (max-width: 768px) {
+    h1 { font-size: $header-height*.4; }
+    @media (min-width: $screen-sm-min) {
+      margin-left: $left-margin;
+      margin-color: $green;
+      display: block;
     }
-    .nav {
-      float: right;
+  }
+  .col-md-4 {
+    float: right;
+    &:before {
+      display: block;
+      content: "";
+      @media (min-width: $screen-md-min) {
+        margin-top: $header-height*.5;
+      }
     }
+  }
+}
+
+#content {
+  padding-top: 20px;
+  @media (min-width: $screen-sm-min) {
+    border-left: $left-border solid $orange;
+    margin-left: $left-margin;
   }
 }
 
@@ -47,27 +95,24 @@ header.page-header{
 }
 
 footer {
-  color: #666;
-  background-color: rgba(black, 0.6);
-}
-
-
-.feather .image-wrap {
-  width: 100%;
   position: relative;
-  @include border-radius(50%);
-  border: 2px solid #a0c7aa;
-  margin: 8px;
-  &:after  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: ' ';
-    @include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
-    //@include background(radial-gradient(50% 50%, circle, rgba(white, 0) 50px, rgba(white, 1) 70px));
-}
+  overflow: visible;
+  background-color: $green;
+  @media (min-width: $screen-sm-min) {
+    border-left: $left-border solid $orange;
+    margin-left: $left-margin;
+    &:after {
+      @include corner;
+      position: absolute;
+      width: $left-border;
+      height: $left-border*3;
+      right: 0;
+      bottom: -$bottom-margin;
+      margin-right: $left-margin;
+      background-color: $orange;
+    }
+    .copyright { text-align: center; }
+  }
 }
 
 .panel {
@@ -81,8 +126,8 @@ footer {
       top: -1px;
       right: -1px;
       background: url(../images/featured.png) no-repeat;
-}
-}
+    }
+  }
 }
 
 #project-list {
