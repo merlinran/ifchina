@@ -90,10 +90,23 @@ header {
 }
 
 #cover-story {
-  img {
-    width: 100%;
+  .bx-caption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 4rem;
+    background: transparent;
+    text-align: center;
+  }
+  .bxslider a {
+    left: 0;
+    img {
+      margin: 0 auto;
+      height: 600px;
+    }
   }
 }
+
 #timelineContainer {
   background-color: rgba(white, 0.6);
   margin-bottom: 20px;

@@ -1,10 +1,27 @@
 #cover-story
-  {% with_scope featured: true %}
-  {% assign article = contents.articles.first %}
-  %a(href="featured")
-    .feather
-      {{ article.photo.url | image_tag: 'class:image-wrap' }}
-    %h1 {{article.title}}
-    {{article.text}}
-  {% endwith_scope %}
-
+  %ul.bxslider
+    {% with_scope featured: true %}
+    {% for article in contents.articles %}
+    {% if forloop.index <= 5 %}
+    %a(href="/featured")
+      %li
+        .feather
+          {% capture title %}
+          title: {{ article.title }}
+          {% endcapture %}
+          {{ article.photo.url | image_tag: title }}
+        .text
+          %p {{article.text}}
+    {% endif %}
+    {% endfor %}
+    {% endwith_scope %}
+  {{ 'jquery.bxslider.min' | javascript_tag }}
+  :javascript
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+        auto: true,
+        autoControls: true,
+        mode: 'fade',
+        captions: true
+      });
+    });
